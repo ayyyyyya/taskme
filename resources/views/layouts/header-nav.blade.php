@@ -33,7 +33,7 @@
                                     </div>
                                     <div class="content">
                                         <h6>
-                                            John Doe
+                                            Jhon Doe
                                             <span class="text-regular">
                                                 comment on a product.
                                             </span>
@@ -129,7 +129,8 @@
                             data-bs-toggle="dropdown" aria-expanded="false">
                             <div class="profile-info">
                                 <div class="info">
-                                    <h6>John Doe</h6>
+                                    <h6>{{ auth()->user()->name }}</h6>
+                                    {{-- <h6>Irfan Yasin</h6> --}}
                                     <div class="image">
                                         <img src="/admin-template/assets/images/profile/profile-image.png"
                                             alt="" />
@@ -157,7 +158,11 @@
                                 <a href="/setting/account"> <i class="lni lni-cog"></i> Settings </a>
                             </li>
                             <li>
-                                <a href="#0"> <i class="lni lni-exit"></i> Sign Out </a>
+                                {{-- <form action="/logout" method="post" class="d-inline">
+                                    @csrf
+                                    <button type="submit" class="btn-none"><i class="lni lni-exit"></i> Sign Out </button>
+                                </form> --}}
+                                <a href="/logout"> <i class="lni lni-exit"></i> Sign Out </a>
                             </li>
                         </ul>
                     </div>

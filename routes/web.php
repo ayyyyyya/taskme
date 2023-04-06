@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Auth\AuthenticationController;
+use App\Http\Controllers\Auth\GoogleController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BrainybotController;
 use App\Http\Controllers\DashboardController;
@@ -23,6 +25,8 @@ use App\Http\Controllers\SettingScheduleController;
 |
 */
 
+
+// Pages Route
 Route::get('/', [DashboardController::class, 'index']);
 
 Route::prefix('tasks')->group(function () {
@@ -46,3 +50,21 @@ Route::prefix('settings')->group(function () {
     Route::get('/schedule', [SettingScheduleController::class, 'index']);
 });
 Route::get('/report', [ReportController::class, 'index']);
+
+
+
+// Authentiaction with google
+Route::get('/auth/google', [GoogleController::class,  'redirectToGoogle'])->name('auth.google');
+Route::get('/auth/google/callback', [GoogleController::class, 'handleGoogleCallback']);
+
+// Logout
+Route::post('/logout', [AuthenticationController::class, 'logout']);
+
+Route::get('/sign-in', [AuthenticationController::class, 'login']);
+Route::post('/auth/sign-in', [AuthenticationController::class, 'authenticate']);
+
+Route::get('/sign-up', function() {
+    return view('auth.sign-up', [
+        'title' => 'Sign up'
+    ]);
+});

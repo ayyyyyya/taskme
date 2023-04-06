@@ -1,0 +1,47 @@
+<?php
+
+namespace App\Http\Controllers\Auth;
+
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Auth;
+
+class AuthenticationController extends Controller
+{
+    public function login() {
+        return view('auth.sign-in', [
+            'title' => 'Sign in'
+        ]);
+    }
+
+
+    public function authenticate(Request $request): RedirectResponse
+    {
+        $credentials = $request->validate([
+            'email' => ['required', 'email'],
+            'password' => ['required'],
+        ]);
+ 
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+ 
+            return redirect()->intended('dashboard');
+        }
+ 
+        return back()->withErrors([
+            'email' => 'The provided credentials do not match our records.',
+        ])->onlyInput('email');
+    }
+
+    public function logout() {
+        
+        Auth::logout();
+ 
+        request()->session()->invalidate();
+    
+        request()->session()->regenerateToken();
+    
+        return redirect('/sign-in');
+    }
+}
