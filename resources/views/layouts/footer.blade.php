@@ -5,8 +5,8 @@
                 <div class="copyright text-center text-md-start">
                     <p class="text-sm">
                         Designed and Developed by
-                        <a href="http://irfanyasin.epizy.com" rel="nofollow" target="_blank">
-                            Irfan Yasin
+                        <a href="#" rel="nofollow" target="_blank">
+                           Thans
                         </a>
                     </p>
                 </div>

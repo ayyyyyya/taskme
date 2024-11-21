@@ -2,7 +2,7 @@
     <div class="navbar-logo">
         <a href="/">
             <img src="/admin-template/assets/images/logo/Logo.png" width="60px" height="60px" alt="logo" />
-            <h4><span>Task </span><span style="color: #4a6cf7;"> Master</span></h4>
+            <h4><span>Task </span><span style="color: #4a6cf7;"> Me</span></h4>
         </a>
     </div>
     <nav class="sidebar-nav">

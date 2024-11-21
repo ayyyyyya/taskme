@@ -130,7 +130,6 @@
                             <div class="profile-info">
                                 <div class="info">
                                     <h6>{{ auth()->user()->name }}</h6>
-                                    {{-- <h6>Irfan Yasin</h6> --}}
                                     <div class="image">
                                         <img src="/admin-template/assets/images/profile/profile-image.png"
                                             alt="" />
@@ -158,11 +157,10 @@
                                 <a href="/setting/account"> <i class="lni lni-cog"></i> Settings </a>
                             </li>
                             <li>
-                                {{-- <form action="/logout" method="post" class="d-inline">
+                                <form action="/logout" method="post" class="d-inline">
                                     @csrf
                                     <button type="submit" class="btn-none"><i class="lni lni-exit"></i> Sign Out </button>
-                                </form> --}}
-                                <a href="/logout"> <i class="lni lni-exit"></i> Sign Out </a>
+                                </form>
                             </li>
                         </ul>
                     </div>

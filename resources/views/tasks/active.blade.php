@@ -31,22 +31,4 @@
 
     @include('layouts.partials.button-add-task-modal')
 
-
-    <div class="row">
-        <div class="col-md-4">
-            <div class="card-style-3 mb-30">
-                <div class="card-content">
-                    <h4><a href="#0">Card Title here </a></h4>
-                    <p>
-                        With supporting text below as a natural lead-in to
-                        additional content. consectetur adipiscing elit. Integer
-                        posuere erat a ante. With supporting text below as a
-                        natural lead-in to additional content. consectetur
-                        adipiscing elit. Integer posuere erat a ante.
-                    </p>
-                    <a href="#0" class="read-more">Read More</a>
-                </div>
-            </div>
-        </div>
-    </div>
 @endsection

@@ -48,61 +48,53 @@
                         Start creating the best possible user experience for you
                         customers.
                     </p>
-                    <form action="#">
+                    <form action="/sign-up" method="POST">
+                        @csrf  <!-- Jangan lupa menambahkan CSRF token -->
+                        
                         <div class="row">
                             <div class="col-12">
                                 <div class="input-style-1">
-                                    <label>Name</label>
-                                    <input type="text" name="name" placeholder="Name" />
+                                    <label>Nama</label>
+                                    <input type="text" name="name" placeholder="Nama" required />
                                 </div>
                             </div>
                             <!-- end col -->
+                    
                             <div class="col-12">
                                 <div class="input-style-1">
                                     <label>Email</label>
-                                    <input type="email" name="email" placeholder="Email" />
+                                    <input type="email" name="email" placeholder="Email" required />
                                 </div>
                             </div>
                             <!-- end col -->
+                    
                             <div class="col-12">
                                 <div class="input-style-1">
                                     <label>Password</label>
-                                    <input type="password" name="password" placeholder="Password" />
+                                    <input type="password" name="password" placeholder="Password" required />
                                 </div>
                             </div>
                             <!-- end col -->
+                    
                             <div class="col-12">
-                                <div class="form-check checkbox-style mb-30">
-                                    <input class="form-check-input" type="checkbox" value=""
-                                        id="checkbox-not-robot" />
-                                    <label class="form-check-label" for="checkbox-not-robot">
-                                        I'm not robot</label>
+                                <div class="input-style-1">
+                                    <label>Konfirmasi Password</label>
+                                    <input type="password" name="password_confirmation" placeholder="Konfirmasi Password" required />
                                 </div>
                             </div>
                             <!-- end col -->
+                    
                             <div class="col-12">
-                                <div
-                                    class="
-                        button-group
-                        d-flex
-                        justify-content-center
-                        flex-wrap
-                      ">
-                                    <button
-                                        class="
-                          main-btn
-                          primary-btn
-                          btn-hover
-                          w-100
-                          text-center
-                        ">
-                                        Sign Up
+                                <div class="button-group d-flex justify-content-center flex-wrap">
+                                    <button class="main-btn primary-btn btn-hover w-100 text-center">
+                                        Daftar
                                     </button>
                                 </div>
                             </div>
                         </div>
                         <!-- end row -->
-                    </form>
+                    </form>                    
+                     
                     <div class="singup-option pt-40">
                         <p class="text-sm text-medium text-center text-gray">
                             Easy Sign Up With
