@@ -1,4 +1,7 @@
 @extends('layouts.index')
+@section('title')
+    TaskMe | Dashbord
+@stop
 @section('content')
     <!-- ========== title-wrapper start ========== -->
     <div class="title-wrapper pt-30">
