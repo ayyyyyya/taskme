@@ -1,4 +1,8 @@
 @extends('layouts.index')
+
+@section('title')
+    TaskMe | Active
+@stop
 @section('content')
     <!-- ========== title-wrapper start ========== -->
     <div class="title-wrapper pt-30">
@@ -30,5 +34,5 @@
     <!-- ========== title-wrapper end ========== -->
 
     @include('layouts.partials.button-add-task-modal')
-
+   
 @endsection
